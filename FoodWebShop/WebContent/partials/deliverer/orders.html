@@ -1,0 +1,74 @@
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Food Order</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-href="#/user/deliverer/{{user.username}}">Home</a>
+                    </li>
+                    <li>
+                        <a ng-if="user.vehicle.manufacturer != undefined" ng-href="#/user/deliverer/{{user.username}}/vehicle">Vehicle</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-model="user">
+                        <a>{{ user.firstName }} {{ user.lastName}}</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="logoutUser()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">Previous Orders</h3>
+            <hr>
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" placeholder="Search by date" ng-model="search.dateTime" />
+                <input type="text" class="form-control" placeholder="Search by type" ng-model="search.item.article.type" />
+                <input type="text" class="form-control" placeholder="Search by status" ng-model="search.status" />
+            </div>
+            <hr>
+            <div class="table-responsive">
+                <table id="mytable" class="table table-sm table-hover">
+                    <thead>
+                        <th>Customer</th>
+                        <th>Order Time</th>
+                        <th>Status</th>
+                        <th>Total Bill</th>
+                    </thead>
+                    <tbody ng-repeat="o in previousOrders | filter:search">
+                        <tr>
+                            <td>{{o.userId}}</td>
+                            <td>{{o.dateTime}}</td>
+                            <td>{{o.status}}</td>
+                            <td>
+                                <span class="badge badge-info badge-pill">{{o.bill | number : 2}}</span>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div><h3 class="text-center">Total: <span class="badge badge-info badge-pill"> {{ total | number : 2 }}</span></h3></div>
+        </div>
+    </div>
+</div>

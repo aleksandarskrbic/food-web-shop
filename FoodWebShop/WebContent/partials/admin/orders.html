@@ -1,0 +1,88 @@
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Food Order</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-href="#/user/admin/{{user.username}}">Home</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-model="user">
+                        <a>{{ user.firstName }} {{ user.lastName}}</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="logoutUser()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">Orders</h3>
+            <hr>
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" placeholder="Search by date" ng-model="search.dateTime" />
+                <input type="text" class="form-control" placeholder="Search by type" ng-model="search.item.article.type" />
+                <input type="text" class="form-control" placeholder="Search by name" ng-model="search.item.article.name" />
+                <input type="text" class="form-control" placeholder="Search by status" ng-model="search.status" />
+            </div>
+            <hr>
+            <div class="table-responsive">
+                <table id="mytable" class="table table-sm table-hover">
+                    <thead>
+                        <th>Customer</th>
+                        <th>Deliverer</th>
+                        <th>Order Time</th>
+                        <th>Status</th>
+                        <th>Total Bill</th>
+                        <th>Action</th>
+                    </thead>
+                    <tbody ng-repeat="o in orders | filter:search">
+                        <tr>
+                            <td>{{o.userId}}</td>
+                            <td>{{o.deliveryPersonId}}</td>
+                            <td>{{o.dateTime}}</td>
+                            <td>{{o.status}}</td>
+                            <td>
+                                <span class="badge badge-info badge-pill">{{o.bill | number : 2}}</span>
+                            </td>
+                            <td>
+                                <div>
+                                    <ul ng-if="o.status === 'DELIVERED'" class="nav nav-pills">
+                                        <li>
+                                            <a href="">No Actions Available</a>
+                                        </li>
+                                    </ul>
+                                    <ul ng-if="o.status !== 'DELIVERED'" class="nav nav-pills">
+                                        <li>
+                                            <a ng-href="#/user/admin/{{user.username}}/orders/{{o.id}}">Edit Order</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>

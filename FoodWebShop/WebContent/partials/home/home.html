@@ -1,0 +1,82 @@
+<div class="container">
+	<!-- Static navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				    aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Food Order</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="#/">Home</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#/login">Login</a>
+					</li>
+					<li>
+						<a href="#/register">Register</a>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+		<!--/.container-fluid -->
+	</nav>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<h4 class="list-group-item-heading">Choose Restaurant Type</h4>
+			<hr>
+			<div class="list-group">
+				<a href="#/category/domestic" class="list-group-item list-group-item-action">
+					<img data-ng-src="/FoodWebShop/icons/bean.png" style="border: 0; float: left; margin-right: 20px"> Domestic
+				</a>
+				<a href="#/category/barbecue" class="list-group-item list-group-item-action">
+					<img data-ng-src="/FoodWebShop/icons/barbecue.png" style="border: 0; float: left; margin-right: 20px"> Barbecue
+				</a>
+				<a href="#/category/chinese" class="list-group-item list-group-item-action">
+					<img data-ng-src="/FoodWebShop/icons/pagoda.png" style="border: 0; float: left; margin-right: 20px"> Chinese
+				</a>
+				<a href="#/category/indian" class="list-group-item list-group-item-action">
+					<img data-ng-src="/FoodWebShop/icons/india.png" style="border: 0; float: left; margin-right: 20px"> Indian
+				</a>
+				<a href="#/category/pastry" class="list-group-item list-group-item-action">
+					<img data-ng-src="/FoodWebShop/icons/cake.png" style="border: 0; float: left; margin-right: 20px"> Pastry
+				</a>
+				<a href="#/category/pizza" class="list-group-item list-group-item-action">
+					<img data-ng-src="/FoodWebShop/icons/pizza.png" style="border: 0; float: left; margin-right: 20px"> Pizza
+				</a>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<h4 class="list-group-item-heading">Popular Food</h4>
+			<hr>
+			<div class="list-group">
+				<a class="list-group-item list-group-item-action" ng-repeat="f in food">
+					<img data-ng-src="/FoodWebShop/icons/steak.png" style="border: 0; float: left; margin-right: 20px">{{f}}
+				</a>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<h4 class="list-group-item-heading">Popular Drinks</h4>
+			<hr>
+			<div class="list-group">
+				<a class="list-group-item list-group-item-action" ng-repeat="d in drinks">
+					<img data-ng-src="/FoodWebShop/icons/ice-tea.png" style="border: 0; float: left; margin-right: 20px"> {{d}}
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

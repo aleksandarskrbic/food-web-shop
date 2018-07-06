@@ -1,0 +1,96 @@
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Food Order</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-href="#/user/admin/{{user.username}}">Home</a>
+                    </li>
+                    <li>
+                        <a ng-model="user" ng-model="selectedRestaurant" ng-href="#/user/admin/{{user.username}}/restaurants/add/articles/{{selectedRestaurant.id}}">Add New Article</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-model="user">
+                        <a>{{ user.firstName }} {{ user.lastName}}</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="logoutUser()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 ng-model="selectedRestaurant" class="text-center">Articles in {{selectedRestaurant.name}}</h3>
+            <hr>
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" placeholder="Search by type" ng-model="search.type" />
+                <input type="text" class="form-control" placeholder="Search by price" ng-model="search.price" />
+                <input type="text" class="form-control" placeholder="Search by name" ng-model="search.name" />
+            </div>
+            <hr>
+            <div ng-if="selectedRestaurant.menu.length > 0" class="table-responsive">
+                <table id="mytable" class="table table-sm table-hover">
+                    <thead>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Actions</th>
+                    </thead>
+                    <tbody ng-repeat="a in selectedRestaurant.menu | filter:search">
+                        <tr>
+                            <td>{{a.name}}</td>
+                            <td>{{a.type}}</td>
+                            <td>{{a.price}}</td>
+                            <td>{{a.description}}</td>
+                            <td ng-if="a.type === 'BEVERAGE'">{{a.amount}} ml</td>
+                            <td ng-if="a.type === 'FOOD'">{{a.amount}} grams</td>
+                            <td>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                        Select Action
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a ng-model="user" ng-href="#/user/admin/{{user.username}}/restaurants/articles/{{selectedRestaurant.id}}/edit/{{a.id}}">Edit</a>
+                                        </li>
+                                        <li>
+                                            <a href="" ng-click="deleteArticle(a.id, selectedRestaurant.id)">Delete</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <hr>
+            </div>
+            <div ng-model="selectedRestaurant" ng-if="selectedRestaurant.menu.length === 0">
+                <h4 class="text-center">There is no articles available in {{ selectedRestaurant.name }}</h4>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+<div class="container">
+	<!-- Static navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				    aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">Food Order</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a ng-href="#/user/admin/{{user.username}}">Home</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li ng-model="user">
+						<a>{{ user.firstName }} {{ user.lastName}}</a>
+					</li>
+					<li>
+						<a href="" ng-click="logoutUser()">Logout</a>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+		<!--/.container-fluid -->
+	</nav>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h3 class="text-center">Users</h3>
+			<hr>
+			<div class="input-group input-group-sm mb-3">
+				<input type="text" class="form-control" placeholder="Search by First Name" ng-model="search.firstName" />
+				<input type="text" class="form-control" placeholder="Search by Last Name" ng-model="search.lastName" />
+				<input type="text" class="form-control" placeholder="Search by Address" ng-model="search.address" />
+				<input type="text" class="form-control" placeholder="Search by Email" ng-model="search.email" />
+				<input type="text" class="form-control" placeholder="Search by Role" ng-model="search.role" />
+				<input type="text" class="form-control" placeholder="Search by Phone" ng-model="search.phone" />
+			</div>
+			<hr>
+			<div class="table-responsive">
+				<table id="mytable" class="table table-sm table-hover">
+					<thead>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Address</th>
+						<th>Email</th>
+						<th>Role</th>
+						<th>Phone</th>
+						<th>Change Role</th>
+						<th>Other</th>
+					</thead>
+					<tbody ng-repeat="u in users | filter:search">
+						<tr>
+							<td>{{u.firstName}}</td>
+							<td>{{u.lastName}}</td>
+							<td>{{u.address}}</td>
+							<td>{{u.email}}</td>
+							<td>{{u.role}}</td>
+							<td>{{u.phone}}</td>
+							<td>
+								<div class="dropdown">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+										Select Role
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="" ng-hide="u.role === 'ADMIN'" ng-click="setAdmin(u.username)">ADMIN</a>
+										</li>
+										<li>
+											<a href="" ng-hide="u.role === 'CUSTOMER'" ng-click="setCustomer(u.username)">CUSTOMER</a>
+										</li>
+										<li>
+											<a href="" ng-hide="u.role === 'DELIVERER'" ng-click="setDeliverer(u.username)">DELIVERER</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+							<td>
+								<ul ng-if="u.role !== 'DELIVERER'" class="nav nav-pills">
+									<li>
+										<a href="">No Actions Available</a>
+									</li>
+								</ul>
+
+								<div ng-if="u.role === 'DELIVERER'" class="dropdown">
+									<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+										Vehicle Actions
+										<span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu">
+										<li ng-if="u.vehicle == null || u.vehicle.deleted">
+											<a ng-href="#/user/admin/{{user.username}}/users/{{u.username}}/add">Add Vehicle</a>
+										</li>
+										<li ng-hide="u.vehicle.deleted || u.vehicle == null">
+											<a ng-click="deleteVehicle(u.vehicle.id, u.username)">Delete Vehicle</a>
+										</li>
+										<li ng-hide="u.vehicle.deleted || u.vehicle == null">
+											<a ng-href="#/user/admin/{{user.username}}/users/{{u.username}}/edit">Edit Vehicle</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<hr>
+			<br>
+			<br>
+		</div>
+	</div>
+</div>

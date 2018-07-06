@@ -1,0 +1,86 @@
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Food Order</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-href="#/user/customer/{{user.username}}">Home</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/user/customer/{{user.username}}/orders">My Orders</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-model="user">
+                        <a>{{ user.firstName }} {{ user.lastName}}</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="logoutUser()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+</div>
+
+<div class="container" ng-if="items.length > 0">
+    <h4 class="text-center">Items in Cart</h4>
+    <hr>
+    <div class="table-responsive">
+        <table id="mytable" class="table table-sm table-hover">
+            <thead>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Portions</th>
+                <th>Actions</th>
+            </thead>
+            <tbody ng-repeat="item in items">
+                <tr>
+                    <td>{{item.article.name}}</td>
+                    <td>{{item.article.type}}</td>
+                    <td>{{item.article.price}}</td>
+                    <td>{{item.article.description}}</td>
+                    <td ng-if="item.article.type === 'BEVERAGE'">{{item.article.amount}} ml</td>
+                    <td ng-if="item.article.type === 'FOOD'">{{item.article.amount}} grams</td>
+                    <td>{{item.amount}}</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" ng-click="removeFromCart(item.id)">Remove From Cart</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+    </div>
+    <div>
+        <div class="form-group">
+            <label>Order Note</label>
+            <input class="form-control" type="text" placeholder="Order Note">
+        </div>
+        <div class="form-group">
+            <label>Bonus Points</label>
+            <input placeholder="You have {{ bonusPoints }} bonus points" data-ng-model="bp" class="form-control" />
+        </div>
+        <hr>
+        <button type="button" class="btn btn-primary" ng-click="makeOrder(note, bp, items)">Order</button>
+    </div>
+</div>
+
+<div class="container" ng-if="items.length === 0">
+    <h3 class="text-center">Shopping Cart is Empty</h3>
+</div>

@@ -1,0 +1,67 @@
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Food Order</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-href="#/user/admin/{{user.username}}">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Edit Article</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-model="user">
+                        <a>{{ user.firstName }} {{ user.lastName}}</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="logoutUser()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+</div>
+
+
+<div>
+    <form name="addForm" class="col-md-6 col-md-offset-3">
+        <h3 class="text-center">Edit Article</h3>
+        <hr>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" ng-model="articleToEdit.name" ng-required="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="text" ng-model="articleToEdit.price" ng-required="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Descritpion</label>
+            <input type="text" ng-model="articleToEdit.description" ng-required="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Amount</label>
+            <input type="text" ng-model="articleToEdit.amount" ng-required="true" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="category-field">Category</label>
+            <select class="form-control" ng-model="articleToEdit.type" ng-options="c for c in types">
+            </select>
+        </div>
+        <button type="submit" form="addForm" ng-click="updateArticle(selectedArtId, selRestId, articleToEdit)" class="btn btn-primary">Update</button>
+    </form>
+</div>

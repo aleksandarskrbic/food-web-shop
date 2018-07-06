@@ -1,0 +1,124 @@
+<div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Food Order</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ng-href="#/user/deliverer/{{user.username}}">Home</a>
+                    </li>
+                    <li>
+                        <a ng-if="user.vehicle.manufacturer != undefined" ng-href="#/user/deliverer/{{user.username}}/vehicle">Vehicle</a>
+                    </li>
+                    <li>
+                        <a ng-href="#/user/deliverer/{{user.username}}/orders">Previous Orders</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-model="user">
+                        <a>{{ user.firstName }} {{ user.lastName}}</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="logoutUser()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+</div>
+
+<div ng-if="user.vehicle.manufacturer == undefined" class="container">
+    <h2 class="text-center">Get Vehicle First!</h2>
+    <hr>
+</div>
+
+<div ng-if="currentOrder.items === undefined && user.vehicle.manufacturer != undefined" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">Pending Orders</h3>
+            <hr>
+            <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" placeholder="Search by date" ng-model="search.dateTime" />
+                <input type="text" class="form-control" placeholder="Search by type" ng-model="search.item.article.type" />
+                <input type="text" class="form-control" placeholder="Search by status" ng-model="search.item.article.status" />
+            </div>
+            <hr>
+            <div class="table-responsive">
+                <table id="mytable" class="table table-sm table-hover">
+                    <thead>
+                        <th>Customer</th>
+                        <th>Order Time</th>
+                        <th>Status</th>
+                        <th>Total Bill</th>
+                        <th>Take Order</th>
+                    </thead>
+                    <tbody ng-repeat="o in orders | filter:search">
+                        <tr>
+                            <td>{{o.userId}}</td>
+                            <td>{{o.dateTime}}</td>
+                            <td>{{o.status}}</td>
+                            <td>
+                                <span class="badge badge-info badge-pill">{{o.bill | number : 2}}</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-primary" ng-click="takeOrder(o.id, user.username)">Take Order</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div ng-if="orders.length === 0" class="container">
+        <h2 class="text-center">There Are No Pending Orders</h2>
+        <hr>
+    </div>
+
+<div ng-if="currentOrder.items !== undefined" class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center">Current Order</h3>
+            <hr>
+            <div class="table-responsive">
+                <table id="mytable" class="table table-sm table-hover">
+                    <thead>
+                        <th>Customer</th>
+                        <th>Order Time</th>
+                        <th>Status</th>
+                        <th>Total Bill</th>
+                        <th>Delivered</th>
+                    </thead>
+                    <tbody ng-model="currentOrder">
+                        <tr>
+                            <td>{{currentOrder.userId}}</td>
+                            <td>{{currentOrder.dateTime}}</td>
+                            <td>{{currentOrder.status}}</td>
+                            <td>
+                                <span class="badge badge-info badge-pill">{{currentOrder.bill | number : 2}}</span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-primary" ng-click="finishOrder()">Delivered</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>

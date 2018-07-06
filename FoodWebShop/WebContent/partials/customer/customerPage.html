@@ -1,0 +1,80 @@
+<div class="container">
+	<!-- Static navbar -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				    aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand">Food Order</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a ng-href="#/user/customer/{{user.username}}">Home</a>
+					</li>
+					<li>
+						<a ng-href="#/user/customer/{{user.username}}/orders">My Orders</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li ng-model="user">
+						<a>{{ user.firstName }} {{ user.lastName}}</a>
+					</li>
+					<li>
+						<a href="" ng-click="logoutUser()">Logout</a>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+		<!--/.container-fluid -->
+	</nav>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h4 class="text-center">Select Restaurant To Make Order</h4>
+			<hr>
+			<div class="input-group input-group-sm mb-3">
+				<input type="text" class="form-control" placeholder="Search by name" ng-model="search.name" />
+				<input type="text" class="form-control" placeholder="Search by address" ng-model="search.address" />
+				<input type="text" class="form-control" placeholder="Search by category" ng-model="search.category" />
+			</div>
+			<hr>
+			<div class="table-responsive">
+				<table id="mytable" class="table table-sm table-hover">
+					<thead>
+						<th>Name</th>
+						<th>Address</th>
+						<th>Category</th>
+						<th>Menu</th>
+						<th>Action</th>
+					</thead>
+					<tbody ng-repeat="r in restaurants | filter:search">
+						<tr>
+							<td>{{r.name}}</td>
+							<td>{{r.address}}</td>
+							<td>{{r.category}}</td>
+							<td>
+								<a ng-model="user" ng-href="#/user/customer/{{user.username}}/restaurants/{{r.id}}/articles">Show Menu</a>
+							</td>
+							<td>
+								<button ng-if="isFavourite(r.id) && favourites != null && favourites.length > 0" type="button" class="btn btn-danger" ng-click="removeFromFavourites(r.id)">Remove From Favourites</button>
+								<button ng-if="!isFavourite(r.id) || favourites == null" type="button" class="btn btn-primary" ng-click="addToFavourites(r.id)">Add To Favourites</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br>
+			<br>
+			<hr>
+		</div>
+	</div>
+</div>

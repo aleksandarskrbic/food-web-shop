@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link href="css/toastr.min.css" rel="stylesheet" />
+
+	<script src="js/angular.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/toastr.min.js"></script>
+
+	<script src="app/app.js"></script>
+
+	<script src="app/controller/adminController.js"></script>
+	<script src="app/controller/customerController.js"></script>
+	<script src="app/controller/delivererController.js"></script>
+	<script src="app/controller/homeController.js"></script>
+	<script src="app/controller/loginController.js"></script>
+	<script src="app/controller/registerController.js"></script>
+
+	<script src="app/service/orderService.js"></script>
+	<script src="app/service/restaurantService.js"></script>
+	<script src="app/service/userService.js"></script>
+
+	<script src="app/toastrSettings.js"></script>
+
+	<title>Food Order</title>
+
+</head>
+
+<body>
+	<div ng-view></div>
+</body>
+
+</html>

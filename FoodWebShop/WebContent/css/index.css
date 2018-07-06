@@ -1,0 +1,4 @@
+.list-group {
+  display: grid;
+  flex-direction: column;
+}
