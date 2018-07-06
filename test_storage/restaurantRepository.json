@@ -1,0 +1,617 @@
+[ {
+  "id" : "a2b742f0-b512-4ae2-8686-6f32dc014d07",
+  "name" : "Pizzeria Ciao",
+  "address" : "22 Acacia Avenue",
+  "category" : "PIZZERIA",
+  "menu" : [ {
+    "id" : "3ea9d746-51a7-40cb-a1df-167c33373950",
+    "type" : "BEVERAGE",
+    "name" : "Juice",
+    "price" : 150.0,
+    "description" : "Cedjena Narandza",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "c81fcd04-8098-4369-9537-e070b3856703",
+    "type" : "FOOD",
+    "name" : "Mala Pizza",
+    "price" : 500.0,
+    "description" : "Kapricoza",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "424eb89f-fe8d-4cc2-8d57-c335306283c2",
+    "type" : "FOOD",
+    "name" : "Srednja Pizza",
+    "price" : 750.0,
+    "description" : "Kapricoza",
+    "amount" : 750,
+    "deleted" : false
+  }, {
+    "id" : "c6bb7b18-fcf9-43f8-bc59-09b97ccd9f54",
+    "type" : "FOOD",
+    "name" : "Velika Pizza",
+    "price" : 1100.0,
+    "description" : "Kapricoza",
+    "amount" : 1000,
+    "deleted" : false
+  }, {
+    "id" : "8bc970af-29cf-4198-8a04-63cdd5846b96",
+    "type" : "BEVERAGE",
+    "name" : "Pepsi",
+    "price" : 120.0,
+    "description" : null,
+    "amount" : 250,
+    "deleted" : false
+  }, {
+    "id" : "fab084c5-73a1-4863-b034-1af7b42982a0",
+    "type" : "BEVERAGE",
+    "name" : "Cola Zero",
+    "price" : 130.0,
+    "description" : "Smece",
+    "amount" : 330,
+    "deleted" : false
+  }, {
+    "id" : "5b376480-2c12-40a7-a958-47642500c26b",
+    "type" : "BEVERAGE",
+    "name" : "Pepsi Max",
+    "price" : 109.99,
+    "description" : "0g secera?",
+    "amount" : 250,
+    "deleted" : false
+  }, {
+    "id" : "e4e824a6-a569-4cbb-9186-8b29d57587b4",
+    "type" : "BEVERAGE",
+    "name" : "Niksicko Tamno",
+    "price" : 195.0,
+    "description" : "Tamno",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "561044d2-902e-4357-b659-9099c0e22f17",
+    "type" : "BEVERAGE",
+    "name" : "Niksicko",
+    "price" : 175.0,
+    "description" : "Svetlo Toceno",
+    "amount" : 500,
+    "deleted" : false
+  } ],
+  "deleted" : false,
+  "bevrages" : [ {
+    "id" : "3ea9d746-51a7-40cb-a1df-167c33373950",
+    "type" : "BEVERAGE",
+    "name" : "Juice",
+    "price" : 150.0,
+    "description" : "Cedjena Narandza",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "8bc970af-29cf-4198-8a04-63cdd5846b96",
+    "type" : "BEVERAGE",
+    "name" : "Pepsi",
+    "price" : 120.0,
+    "description" : null,
+    "amount" : 250,
+    "deleted" : false
+  }, {
+    "id" : "fab084c5-73a1-4863-b034-1af7b42982a0",
+    "type" : "BEVERAGE",
+    "name" : "Cola Zero",
+    "price" : 130.0,
+    "description" : "Smece",
+    "amount" : 330,
+    "deleted" : false
+  }, {
+    "id" : "5b376480-2c12-40a7-a958-47642500c26b",
+    "type" : "BEVERAGE",
+    "name" : "Pepsi Max",
+    "price" : 109.99,
+    "description" : "0g secera?",
+    "amount" : 250,
+    "deleted" : false
+  }, {
+    "id" : "e4e824a6-a569-4cbb-9186-8b29d57587b4",
+    "type" : "BEVERAGE",
+    "name" : "Niksicko Tamno",
+    "price" : 195.0,
+    "description" : "Tamno",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "561044d2-902e-4357-b659-9099c0e22f17",
+    "type" : "BEVERAGE",
+    "name" : "Niksicko",
+    "price" : 175.0,
+    "description" : "Svetlo Toceno",
+    "amount" : 500,
+    "deleted" : false
+  } ],
+  "food" : [ {
+    "id" : "c81fcd04-8098-4369-9537-e070b3856703",
+    "type" : "FOOD",
+    "name" : "Mala Pizza",
+    "price" : 500.0,
+    "description" : "Kapricoza",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "424eb89f-fe8d-4cc2-8d57-c335306283c2",
+    "type" : "FOOD",
+    "name" : "Srednja Pizza",
+    "price" : 750.0,
+    "description" : "Kapricoza",
+    "amount" : 750,
+    "deleted" : false
+  }, {
+    "id" : "c6bb7b18-fcf9-43f8-bc59-09b97ccd9f54",
+    "type" : "FOOD",
+    "name" : "Velika Pizza",
+    "price" : 1100.0,
+    "description" : "Kapricoza",
+    "amount" : 1000,
+    "deleted" : false
+  } ]
+}, {
+  "id" : "63a8f252-4e5b-4276-9e37-528f588f0826",
+  "name" : "Padrino's",
+  "address" : "Mise Dimitrijevica 100",
+  "category" : "PIZZERIA",
+  "menu" : [ {
+    "id" : "0fa20979-8793-4da9-ab7d-e7bb6a54faa0",
+    "type" : "BEVERAGE",
+    "name" : "Coca Cola",
+    "price" : 200.0,
+    "description" : null,
+    "amount" : 250,
+    "deleted" : false
+  }, {
+    "id" : "9e56e2af-9b45-4d99-98d6-85ada4dcc6a2",
+    "type" : "BEVERAGE",
+    "name" : "Sprite",
+    "price" : 199.0,
+    "description" : null,
+    "amount" : 330,
+    "deleted" : false
+  }, {
+    "id" : "7d8fa7c1-6f93-4cc0-9ef3-9961b4056033",
+    "type" : "BEVERAGE",
+    "name" : "Fanta",
+    "price" : 129.0,
+    "description" : "Exotic",
+    "amount" : 200,
+    "deleted" : false
+  }, {
+    "id" : "e317ac20-09c9-4a67-a29e-dce9c374da0d",
+    "type" : "FOOD",
+    "name" : "Quattro Formaggio Mala",
+    "price" : 500.0,
+    "description" : null,
+    "amount" : 300,
+    "deleted" : false
+  }, {
+    "id" : "eb89b1e1-8a61-41c4-895b-1328745fac4e",
+    "type" : "FOOD",
+    "name" : "Quattro Formaggio Srednja",
+    "price" : 749.0,
+    "description" : null,
+    "amount" : 550,
+    "deleted" : false
+  }, {
+    "id" : "23da078a-9a4b-4f0b-8a71-ef0ce642d566",
+    "type" : "FOOD",
+    "name" : "Quattro Formaggio Mala",
+    "price" : 1199.0,
+    "description" : null,
+    "amount" : 1100,
+    "deleted" : false
+  } ],
+  "deleted" : false,
+  "bevrages" : [ {
+    "id" : "0fa20979-8793-4da9-ab7d-e7bb6a54faa0",
+    "type" : "BEVERAGE",
+    "name" : "Coca Cola",
+    "price" : 200.0,
+    "description" : null,
+    "amount" : 250,
+    "deleted" : false
+  }, {
+    "id" : "9e56e2af-9b45-4d99-98d6-85ada4dcc6a2",
+    "type" : "BEVERAGE",
+    "name" : "Sprite",
+    "price" : 199.0,
+    "description" : null,
+    "amount" : 330,
+    "deleted" : false
+  }, {
+    "id" : "7d8fa7c1-6f93-4cc0-9ef3-9961b4056033",
+    "type" : "BEVERAGE",
+    "name" : "Fanta",
+    "price" : 129.0,
+    "description" : "Exotic",
+    "amount" : 200,
+    "deleted" : false
+  } ],
+  "food" : [ {
+    "id" : "e317ac20-09c9-4a67-a29e-dce9c374da0d",
+    "type" : "FOOD",
+    "name" : "Quattro Formaggio Mala",
+    "price" : 500.0,
+    "description" : null,
+    "amount" : 300,
+    "deleted" : false
+  }, {
+    "id" : "eb89b1e1-8a61-41c4-895b-1328745fac4e",
+    "type" : "FOOD",
+    "name" : "Quattro Formaggio Srednja",
+    "price" : 749.0,
+    "description" : null,
+    "amount" : 550,
+    "deleted" : false
+  }, {
+    "id" : "23da078a-9a4b-4f0b-8a71-ef0ce642d566",
+    "type" : "FOOD",
+    "name" : "Quattro Formaggio Mala",
+    "price" : 1199.0,
+    "description" : null,
+    "amount" : 1100,
+    "deleted" : false
+  } ]
+}, {
+  "id" : "f1d5dbe4-6052-4348-babe-bb832ad92fc6",
+  "name" : "Random Picerije",
+  "address" : "Promena Adrese",
+  "category" : "PIZZERIA",
+  "menu" : [ {
+    "id" : "2bb50c25-faaf-42c4-a6e8-e3db3e535b27",
+    "type" : "FOOD",
+    "name" : "piiza",
+    "price" : 600.0,
+    "description" : "Nema",
+    "amount" : 350,
+    "deleted" : false
+  } ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ {
+    "id" : "2bb50c25-faaf-42c4-a6e8-e3db3e535b27",
+    "type" : "FOOD",
+    "name" : "piiza",
+    "price" : 600.0,
+    "description" : "Nema",
+    "amount" : 350,
+    "deleted" : false
+  } ]
+}, {
+  "id" : "7e09401b-4db0-4f05-86ce-d169f0be280c",
+  "name" : "Addagio",
+  "address" : "Ok",
+  "category" : "PASTRY",
+  "menu" : [ {
+    "id" : "c498aebe-edf7-44d2-be49-74401e6eb124",
+    "type" : "FOOD",
+    "name" : "Palacinke",
+    "price" : 300.0,
+    "description" : "Palacinke sa eurokremom",
+    "amount" : 200,
+    "deleted" : false
+  }, {
+    "id" : "3191d677-e033-4b94-85dc-c1c0aa409658",
+    "type" : "BEVERAGE",
+    "name" : "Mleko",
+    "price" : 110.0,
+    "description" : "Toplo, hladno",
+    "amount" : 200,
+    "deleted" : false
+  } ],
+  "deleted" : false,
+  "bevrages" : [ {
+    "id" : "3191d677-e033-4b94-85dc-c1c0aa409658",
+    "type" : "BEVERAGE",
+    "name" : "Mleko",
+    "price" : 110.0,
+    "description" : "Toplo, hladno",
+    "amount" : 200,
+    "deleted" : false
+  } ],
+  "food" : [ {
+    "id" : "c498aebe-edf7-44d2-be49-74401e6eb124",
+    "type" : "FOOD",
+    "name" : "Palacinke",
+    "price" : 300.0,
+    "description" : "Palacinke sa eurokremom",
+    "amount" : 200,
+    "deleted" : false
+  } ]
+}, {
+  "id" : "9be64380-3364-4363-8c89-9fb3ff6f1aff",
+  "name" : "Bubi Domaca Kuhinja",
+  "address" : "Stadion Vojvodine",
+  "category" : "DOMESTIC",
+  "menu" : [ {
+    "id" : "1967ae07-792c-454b-b799-e6fefa8cb6bf",
+    "type" : "FOOD",
+    "name" : "Pasulj",
+    "price" : 400.0,
+    "description" : "Pasulj domaci",
+    "amount" : 600,
+    "deleted" : false
+  }, {
+    "id" : "e03ede28-770a-442e-bb99-3f29d7ae2129",
+    "type" : "FOOD",
+    "name" : "Sarma",
+    "price" : 450.0,
+    "description" : "Sarma domaca",
+    "amount" : 650,
+    "deleted" : false
+  }, {
+    "id" : "742236c6-a9ae-47a6-a48a-7f6b62d45b39",
+    "type" : "BEVERAGE",
+    "name" : "Pivo Pivo",
+    "price" : 50.0,
+    "description" : "?",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "db03815b-c155-4011-a0aa-3975d9d324a1",
+    "type" : "BEVERAGE",
+    "name" : "IPA",
+    "price" : 180.0,
+    "description" : "Craft Pivo",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "05a8024f-9edf-4c93-a9fe-69ba4b57a5af",
+    "type" : "FOOD",
+    "name" : "Spikovana Pljeskavica",
+    "price" : 230.0,
+    "description" : "ok",
+    "amount" : 180,
+    "deleted" : false
+  }, {
+    "id" : "8166d77e-252f-4e40-a67b-bbdfc4348892",
+    "type" : "FOOD",
+    "name" : "Rolovani Cevap",
+    "price" : 220.0,
+    "description" : "Cevap + Slanina",
+    "amount" : 140,
+    "deleted" : false
+  } ],
+  "deleted" : false,
+  "bevrages" : [ {
+    "id" : "742236c6-a9ae-47a6-a48a-7f6b62d45b39",
+    "type" : "BEVERAGE",
+    "name" : "Pivo Pivo",
+    "price" : 50.0,
+    "description" : "?",
+    "amount" : 500,
+    "deleted" : false
+  }, {
+    "id" : "db03815b-c155-4011-a0aa-3975d9d324a1",
+    "type" : "BEVERAGE",
+    "name" : "IPA",
+    "price" : 180.0,
+    "description" : "Craft Pivo",
+    "amount" : 500,
+    "deleted" : false
+  } ],
+  "food" : [ {
+    "id" : "1967ae07-792c-454b-b799-e6fefa8cb6bf",
+    "type" : "FOOD",
+    "name" : "Pasulj",
+    "price" : 400.0,
+    "description" : "Pasulj domaci",
+    "amount" : 600,
+    "deleted" : false
+  }, {
+    "id" : "e03ede28-770a-442e-bb99-3f29d7ae2129",
+    "type" : "FOOD",
+    "name" : "Sarma",
+    "price" : 450.0,
+    "description" : "Sarma domaca",
+    "amount" : 650,
+    "deleted" : false
+  }, {
+    "id" : "05a8024f-9edf-4c93-a9fe-69ba4b57a5af",
+    "type" : "FOOD",
+    "name" : "Spikovana Pljeskavica",
+    "price" : 230.0,
+    "description" : "ok",
+    "amount" : 180,
+    "deleted" : false
+  }, {
+    "id" : "8166d77e-252f-4e40-a67b-bbdfc4348892",
+    "type" : "FOOD",
+    "name" : "Rolovani Cevap",
+    "price" : 220.0,
+    "description" : "Cevap + Slanina",
+    "amount" : 140,
+    "deleted" : false
+  } ]
+}, {
+  "id" : "dd2d9cbb-f293-40f8-9172-19115742726f",
+  "name" : "Domaca Kuhinja",
+  "address" : "Rendom Adresa, 45",
+  "category" : "DOMESTIC",
+  "menu" : [ {
+    "id" : "bf4dd4f7-871b-4919-a05a-f382a83f21cb",
+    "type" : "FOOD",
+    "name" : "Pasulj sa kobasicom",
+    "price" : 300.0,
+    "description" : "Nema",
+    "amount" : 300,
+    "deleted" : false
+  } ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ {
+    "id" : "bf4dd4f7-871b-4919-a05a-f382a83f21cb",
+    "type" : "FOOD",
+    "name" : "Pasulj sa kobasicom",
+    "price" : 300.0,
+    "description" : "Nema",
+    "amount" : 300,
+    "deleted" : false
+  } ]
+}, {
+  "id" : "b3079c00-83c5-48bb-a229-69fa92b99dcc",
+  "name" : "Sarma",
+  "address" : "Ne znam, 42",
+  "category" : "DOMESTIC",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "c08b9278-5340-467d-8269-daeccb12b36b",
+  "name" : "Zar Mance",
+  "address" : "Ilije Bircanina, 111",
+  "category" : "BARBECUE",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "5aa41363-f1cf-4ad6-a733-e44192b28451",
+  "name" : "Bubi Grill",
+  "address" : "Ilije Bircanina, 20",
+  "category" : "BARBECUE",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "8f259e31-af6b-47d3-b257-899a91dc419f",
+  "name" : "Rostilj ",
+  "address" : "Hadzi Ruvimova, 78",
+  "category" : "BARBECUE",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "e787c9f7-447e-4802-be08-46fcf0fe00d3",
+  "name" : "Kineska Hrana",
+  "address" : "Peking, 1001",
+  "category" : "CHINESE",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "094958fe-ed4e-4c10-a4f5-5c12f3ab171c",
+  "name" : "Pirinac",
+  "address" : "Peking, 641",
+  "category" : "CHINESE",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "9ff326aa-6695-4c1c-8eae-6acb370446de",
+  "name" : "Chinese Restaurant",
+  "address" : "Hong Kong, 666",
+  "category" : "CHINESE",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "47d37c70-c9ff-4a9d-9f2b-32f652ad850b",
+  "name" : "Indian Restaurant 1",
+  "address" : "Mumbai Street, 50",
+  "category" : "INDIAN",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "0fcd001e-d174-48d3-8823-882c905135b4",
+  "name" : "Indian Restaurant 2",
+  "address" : "Mumbai Street, 1119",
+  "category" : "INDIAN",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "71bc6f45-7a02-4b69-b6af-e7fa0dbe59e7",
+  "name" : "Indian Restaurant 3",
+  "address" : "Mumbai Street, 999",
+  "category" : "INDIAN",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "a5363eac-0808-4888-88a4-286a8817c747",
+  "name" : "Dizni Palacinkarnica",
+  "address" : "Bulevar Cara Lazara, 21",
+  "category" : "PASTRY",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "7fdc3b9c-e6ad-4c5a-ac26-0dec99bb75d8",
+  "name" : "Palacinkarnica Pinokio",
+  "address" : "Bulevar Oslobodjenja, 211",
+  "category" : "PASTRY",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "0cc20224-0679-4699-bd6b-f910aa15ec34",
+  "name" : "Palacinkarnica Balans",
+  "address" : "Futoska, 64",
+  "category" : "PASTRY",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "605e3348-d74d-41af-9115-5ef964ea02f6",
+  "name" : "smece",
+  "address" : "smece",
+  "category" : "BARBECUE",
+  "menu" : [ ],
+  "deleted" : true,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "699b7301-7ab7-4a3a-9862-24bc4f6b7eb3",
+  "name" : "pozdrav",
+  "address" : "cao",
+  "category" : "CHINESE",
+  "menu" : [ ],
+  "deleted" : true,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "4d15d85e-7bbe-420e-98ab-509b704c3977",
+  "name" : "halo",
+  "address" : "koje",
+  "category" : "INDIAN",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "9c6f2ecf-e504-4eba-aa3b-98a6e19bb6e6",
+  "name" : "asd",
+  "address" : "asd",
+  "category" : "DOMESTIC",
+  "menu" : [ ],
+  "deleted" : true,
+  "bevrages" : [ ],
+  "food" : [ ]
+}, {
+  "id" : "2c7f7a94-5a4a-4d0c-b764-1b8f9145c13d",
+  "name" : "Tutorial Hindi",
+  "address" : "nym",
+  "category" : "INDIAN",
+  "menu" : [ ],
+  "deleted" : false,
+  "bevrages" : [ ],
+  "food" : [ ]
+} ]
